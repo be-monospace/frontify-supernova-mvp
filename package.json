@@ -1,0 +1,20 @@
+{
+  "name": "frontify-supernova-mvp",
+  "version": "0.1.0",
+  "description": "Mini MVP: fetch a Frontify Guideline page and serialize its content to markdown",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "list": "node src/list-guidelines.js",
+    "explore": "node src/explore-page.js",
+    "convert": "node src/convert-to-markdown.js",
+    "mock": "USE_MOCK=true node src/convert-to-markdown.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "graphql-request": "^7.1.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

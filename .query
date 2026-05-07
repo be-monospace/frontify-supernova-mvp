@@ -1,0 +1,43 @@
+query LogoPageContent {
+  node(id: "eyJpZGVudGlmaWVyIjo0NzkzMzIsInR5cGUiOiJndWlkZWxpbmUifQ") {
+    ... on Guideline {
+      pages(limit: 1) {
+        items {
+          id
+          title
+          sections {
+            items {
+              id
+              elements {
+                items {
+                  __typename
+                  ... on GuidelinePageHeading {
+                    id
+                    title
+                  }
+                  ... on GuidelinePageBlock {
+                    id
+                    type {
+                      id
+                    }
+                    content
+                  }
+                  ... on GuidelinePageBlockReference {
+                    id
+                    block {
+                      id
+                      type {
+                        id
+                      }
+                      content
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
