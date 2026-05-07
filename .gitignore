@@ -3,4 +3,4 @@ node_modules/
 *.log
 output/
 .DS_Store
-.query-plsyground-ref
+.query-playground-ref.md
